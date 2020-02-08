@@ -8,22 +8,29 @@ namespace Calculator
 {
     class Program
     {
-        public enum ProductCodes
-        {
-            Milk = 0,
-            Juice = 1,
-            Tea = 2
-        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine((ProductCodes)1);
-
-            ProductCodes getParse;
-            bool checkParse = Enum.TryParse("Tea", out getParse);
-            Console.WriteLine((int)getParse);
-            Console.ReadLine();
 
         }
+
+
+        //public enum ProductCodes
+        //{
+        //    Milk = 0,
+        //    Juice = 1,
+        //    Tea = 2
+        //}
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine((ProductCodes)1);
+
+        //    ProductCodes getParse;
+        //    bool checkParse = Enum.TryParse("Tea", out getParse);
+        //    Console.WriteLine((int)getParse);
+        //    Console.ReadLine();
+
+        //}
 
 
 
