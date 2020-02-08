@@ -11,25 +11,57 @@ namespace Calculator
 
         static void Main(string[] args)
         {
-            string result = "";
-            for(int i = 1; i< 101; i++)
-            {
-                if (i % 3 == 0)
-                {
-                    result += "Fizz";
-                }
-                if(i % 5 == 0)
-                {
-                    result += "Buzz";
-                }
-                if(result == "")
-                {
-                    result = i.ToString();
-                }
-                Console.WriteLine(result);
-                result = "";
 
+
+            void FizzBuzz(int end , int start)
+            {
+                int i = start;
+                string result = "";
+                if(i <= end)
+                {
+                    if (i % 3 == 0)
+                    {
+                        result += "Fizz";
+                    }
+                    if (i % 5 == 0)
+                    {
+                        result += "Bizz";
+                    }
+                    if(result == "")
+                    {
+                        result = i.ToString();
+                    }
+                    Console.WriteLine(result);
+                    i++;
+                    FizzBuzz(end, i);
+                }
             }
+
+            FizzBuzz(9161, 1);
+
+            //string result = "";
+            //for(int i = 1; i< 101; i++)
+            //{
+            //    if (i % 3 == 0)
+            //    {
+            //        result += "Fizz";
+            //    }
+            //    if (i % 5 == 0)
+            //    {
+            //        result += "Buzz";
+            //    }
+            //    if (i % 7 == 0)
+            //    {
+            //        result += "Ruzz";
+            //    }
+            //    if (result == "")
+            //    {
+            //        result = i.ToString();
+            //    }
+            //    Console.WriteLine(result);
+            //    result = "";
+
+            //}
             Console.ReadLine();
         }
 
