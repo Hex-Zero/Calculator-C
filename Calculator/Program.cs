@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
@@ -10,19 +6,46 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Type in the first number.");
+            string first = Console.ReadLine();
+            Console.WriteLine("Type in the the operand (Available operations: + - * /).");
+            string operation = Console.ReadLine();
+            Console.WriteLine("Type in the Second number.");
+            string second = Console.ReadLine();
 
-          
-          string first = Console.ReadLine();
-          string second = Console.ReadLine();
+            Console.WriteLine(Program.Calculation(Int32.Parse(first), Int32.Parse(second), operation));
 
-            Console.WriteLine(Program.Add(Int32.Parse(first), Int32.Parse(second)));
-
-            Console.ReadLine();
+            Console.WriteLine("Type yes/y if you would like to Start again, else just press enter to exit.");
+            string endCall = Console.ReadLine();
+            if (endCall == "yes" || endCall == "y")
+            {
+                startAgain();
+            }
         }
-
-        static int Add(int x, int y)
+        static string Calculation(int x, int y, string o)
         {
-             return x + y;
+            if(o == "+"){
+                return (x + y).ToString();
+            }
+            else if (o == "-")
+            {
+                return (x - y).ToString();
+            }
+            else if (o == "/")
+            {
+                return (x / y).ToString();
+            }
+            else if (o == "*")
+            {
+                return (x * y).ToString();
+            }
+            else {
+                return "Not a valid operation.";
+            }
+        }
+        static void startAgain()
+        {
+            Main(null);
         }
     }
 }
