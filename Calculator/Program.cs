@@ -123,7 +123,7 @@ namespace Calculator
             }
             else
             {
-                return "Not a valid operation.";
+                return "Not a valid operator.";
             }
         }
         static void startAgain()
